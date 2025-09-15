@@ -32,8 +32,8 @@ def main():
                     if user == last_name:
                         raise DuplicateVisitorError(user)
 
-                    # Check time restriction (3 minutes)
-                    if datetime.now() < last_time + timedelta(minutes=3):
+                    # Check time restriction (5 minutes)
+                    if datetime.now() < last_time + timedelta(minutes=5):
                         raise TimeRestrictionError(5)
 
             # Append if valid
